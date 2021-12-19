@@ -1,0 +1,12 @@
+<h4>Email and Date of Birth are protected fields and are stored encrypted in the database</h4>
+
+{% for user in users %}
+<ul>
+  <li> {% for key in user.keys() %}
+    <p>
+      {{key}} : <b>{{user[key]}}</b>
+    </p>
+    {% endfor %}
+  </li>
+</ul>
+{% endfor %}
